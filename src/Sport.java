@@ -7,6 +7,17 @@ public class Sport extends Product {
     }
 
 
+    public static void show() {
+        Arrays.sort(Main.products);
+
+        for (int i = 0; i < Main.products.length; i++) {
+            if (((Main.products[i] instanceof Bicycle) | (Main.products[i] instanceof Trainer))) {
+                System.out.println(Main.products[i].name + " Rating - " +
+                        Main.products[i].rating + " Price - " + Main.products[i].price);
+            }
+        }
+    }
+
     @Override
     public int compareTo(Object obj)
     {
